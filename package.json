@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/stevenzeiler/ripple-cli#readme",
   "dependencies": {
-    "commander": "^2.8.1"
+    "commander": "^2.8.1",
+    "ripple-lib": "^0.12.4"
   }
 }

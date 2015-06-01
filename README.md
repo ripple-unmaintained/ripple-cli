@@ -31,3 +31,16 @@ $ ripple-cli --help
     -a --account <account>  ripple account
     -k --key-path <path>    path to account secret key
 ````
+
+### Generating a Wallet
+
+Serialized JSON of a ripple `address` and `secret pair will be written to stdout
+
+````
+$ ripple-cli wallet | json
+{
+    "address": "rJVjRR7LbhJdDi32J7pGvWjiVSiWaSjZj2",
+    "secret": "ss5TntoUUzYGNQ3jypjThwxjZEpf6"
+}
+````
+
