@@ -4,7 +4,7 @@ var commander = require('commander')
 var lib = require('./lib/program')
 
 commander
-  .version('0.1.0')
+  .version(require('./package.json').version)
   .option('-a --account <account>', 'ripple account')
   .option('-k --key-path <path>', 'path to account secret key')
   .option('-s --server <uri>', 'websocket uri to rippled server')
@@ -23,6 +23,11 @@ commander
   .command('pay <destination> <amount> <currency> [issuer]')
   .description('send money to another ripple account')
   .action(lib.pay.bind(commander))
+
+commander
+  .command('server_info')
+  .description('retrieve info of a running rippled server')
+  .action(lib.server_info.bind(commander))
 
 commander
   .parse(process.argv)

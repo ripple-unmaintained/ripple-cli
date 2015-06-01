@@ -23,6 +23,7 @@ $ ripple-cli --help
     wallet                                          generate new random ripple account and secret key
     balances                                        list balances for the specified account
     pay <destination> <amount> <currency> [issuer]  send money to another ripple account
+    server_info                                     retrieve info of a running rippled server
 
   Options:
 
@@ -30,6 +31,7 @@ $ ripple-cli --help
     -V, --version           output the version number
     -a --account <account>  ripple account
     -k --key-path <path>    path to account secret key
+    -s --server <uri>       websocket uri to rippled server
 ````
 
 ### Generating a Wallet
@@ -95,6 +97,38 @@ ripple-cli pay -a r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk rJBrmcc5VRAEEDY4AzVRMFNW192
     "ledger_index": 13784716,
     "metadata": {
       ...
+    }
+}
+````
+
+### Retrieving Server Info
+Serialized JSON of the rippled server stats are written to stdout
+
+````
+ripple-cli server_info --server wss://r.ripple.com:51233 | json
+{
+    "info": {
+        "build_version": "0.28.1-rc3",
+        "complete_ledgers": "13766697-13795596",
+        "hostid": "VASE",
+        "io_latency_ms": 1,
+        "last_close": {
+            "converge_time_s": 2.002,
+            "proposers": 5
+        },
+        "load_factor": 1000,
+        "peers": 85,
+        "pubkey_node": "n9MT5EjnV912KGuBUqPs4tpdhzMPGcnDBrTuWkD9sWQHJ1kDcUcz",
+        "server_state": "full",
+        "validated_ledger": {
+            "age": 2,
+            "base_fee_xrp": 1e-05,
+            "hash": "6AB56C04B87879EF8686FCFF6F7981F2C3E9C5A5963AA3C20A5731B08A3A8A65",
+            "reserve_base_xrp": 20,
+            "reserve_inc_xrp": 5,
+            "seq": 13795596
+        },
+        "validation_quorum": 3
     }
 }
 ````
