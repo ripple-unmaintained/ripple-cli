@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha test/"
   },
+  "bin": {
+    "ripple-cli": "./index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/stevenzeiler/ripple-cli.git"
