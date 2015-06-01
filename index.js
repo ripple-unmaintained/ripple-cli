@@ -11,17 +11,17 @@ commander
 commander
   .command('wallet')
   .description('generate new random ripple account and secret key')
-  .action(lib.wallet)
+  .action(lib.wallet.bind(commander))
 
 commander
   .command('balances')
   .description('list balances for the specified account')
-  .action(lib.balances)
+  .action(lib.balances.bind(commander))
 
 commander
   .command('pay <destination> <amount> <currency> [issuer]')
   .description('send money to another ripple account')
-  .action(lib.pay)
+  .action(lib.pay.bind(commander))
 
 commander
   .parse(process.argv)

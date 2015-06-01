@@ -34,7 +34,7 @@ $ ripple-cli --help
 
 ### Generating a Wallet
 
-Serialized JSON of a ripple `address` and `secret pair will be written to stdout
+Serialized JSON of a ripple `address` and `secret` pair will be written to stdout
 
 ````
 $ ripple-cli wallet | json
@@ -43,4 +43,40 @@ $ ripple-cli wallet | json
     "secret": "ss5TntoUUzYGNQ3jypjThwxjZEpf6"
 }
 ````
+
+### Listing Account Balances
+
+Serialized JSON of ripple account balances and metadata are written to stdout
+
+````
+ripple-cli balances --account r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk | json
+{
+    "account": "r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk",
+    "ledger_hash": "8F9A4486E53A6883F5402FE4F149C25635ED91903377D519A59AA7043C30CA0F",
+    "ledger_index": 13784250,
+    "lines": [
+        {
+            "account": "rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q",
+            "balance": "15",
+            "currency": "XAU",
+            "limit": "100000",
+            "limit_peer": "0",
+            "no_ripple": true,
+            "quality_in": 0,
+            "quality_out": 0
+        },
+        {
+            "account": "rHKueQebtVU9cEamhBbMV8AEViqKjXcBcB",
+            "balance": "-8.773152697244761",
+            "currency": "USD",
+            "limit": "20",
+            "limit_peer": "20",
+            "quality_in": 0,
+            "quality_out": 0
+        }
+    ]
+}
+````
+
+
 
