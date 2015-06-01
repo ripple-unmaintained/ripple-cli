@@ -77,6 +77,3 @@ ripple-cli balances --account r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk | json
     ]
 }
 ````
-
-
-

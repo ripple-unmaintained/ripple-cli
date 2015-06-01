@@ -1,6 +1,6 @@
 {
   "name": "ripple-cli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "command line interface to ripple money and payments",
   "main": "index.js",
   "scripts": {
