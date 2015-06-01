@@ -7,6 +7,7 @@ commander
   .version('0.1.0')
   .option('-a --account <account>', 'ripple account')
   .option('-k --key-path <path>', 'path to account secret key')
+  .option('-s --server <uri>', 'websocket uri to rippled server')
 
 commander
   .command('wallet')

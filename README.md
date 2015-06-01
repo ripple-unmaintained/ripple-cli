@@ -77,3 +77,25 @@ ripple-cli balances --account r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk | json
     ]
 }
 ````
+
+### Paying Ripple Accounts
+Pass the `--key-path` option to a file containing the ripple account secret on a single line
+Transaction result is written to `stdout` as serialized JSON
+
+By default `ripple-cli` loads the file at `~/.ripple`, expecting a json file with a "secret"
+property containing the ripple account secret. Otherwise th --key-path option must be provided
+
+````
+ripple-cli pay -a r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk rJBrmcc5VRAEEDY4AzVRMFNW192dnVQwXt 1 XRP | json
+{
+    "engine_result": "tesSUCCESS",
+    "engine_result_code": 0,
+    "engine_result_message": "The transaction was applied. Only final in a validated ledger.",
+    "ledger_hash": "E4CD26CEB153682D823716A33C840C57504614D915D3B4831BCEB5757FE2B069",
+    "ledger_index": 13784716,
+    "metadata": {
+      ...
+    }
+}
+````
+
