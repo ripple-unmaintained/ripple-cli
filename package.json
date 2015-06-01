@@ -1,0 +1,26 @@
+{
+  "name": "ripple-cli",
+  "version": "1.0.0",
+  "description": "command line interface to ripple money and payments",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/stevenzeiler/ripple-cli.git"
+  },
+  "keywords": [
+    "ripple",
+    "cli",
+    "crypto",
+    "money",
+    "node"
+  ],
+  "author": "Steven Zeiler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenzeiler/ripple-cli/issues"
+  },
+  "homepage": "https://github.com/stevenzeiler/ripple-cli#readme"
+}
