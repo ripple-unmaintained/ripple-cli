@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/stevenzeiler/ripple-cli/issues"
   },
-  "homepage": "https://github.com/stevenzeiler/ripple-cli#readme"
+  "homepage": "https://github.com/stevenzeiler/ripple-cli#readme",
+  "dependencies": {
+    "commander": "^2.8.1"
+  }
 }
