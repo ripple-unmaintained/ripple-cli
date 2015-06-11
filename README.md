@@ -134,7 +134,7 @@ ripple-cli server_info --server wss://r.ripple.com:51233 | json
 }
 ````
 
-### Retrieving Server Info
+### Retrieving Account Info
 
 ````
 ripple-cli account_info -a rEvNvhm4Nddm6QvnKYXxBA5q3vFozHzrnU | json
