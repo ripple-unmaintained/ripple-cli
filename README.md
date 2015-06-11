@@ -15,7 +15,7 @@ To list program options and commands run `--help or -h`
 ````
 $ ripple-cli --help
 
-  Usage: index [options] [command]
+  Usage: ripple-cli [options] [command]
 
 
   Commands:
@@ -24,6 +24,7 @@ $ ripple-cli --help
     balances                                        list balances for the specified account
     pay <destination> <amount> <currency> [issuer]  send money to another ripple account
     server_info                                     retrieve info of a running rippled server
+    account_info                                    retrieve info of a ripple account
 
   Options:
 
@@ -133,3 +134,24 @@ ripple-cli server_info --server wss://r.ripple.com:51233 | json
 }
 ````
 
+### Retrieving Server Info
+
+````
+ripple-cli account_info -a rEvNvhm4Nddm6QvnKYXxBA5q3vFozHzrnU | json
+{
+    "account_data": {
+        "Account": "rEvNvhm4Nddm6QvnKYXxBA5q3vFozHzrnU",
+        "Balance": "49988000",
+        "Domain": "73746576656E7A65696C65722E636F6D",
+        "Flags": 0,
+        "LedgerEntryType": "AccountRoot",
+        "OwnerCount": 0,
+        "PreviousTxnID": "FC492B04157A1E604B831B3C90B8EF2070DD9FDEB299C0715FC5ADADAFAC0890",
+        "PreviousTxnLgrSeq": 13978309,
+        "Sequence": 2,
+        "index": "F3678BE6AEACC56C8C040BE6FE64FEBFC93F5BE42A70E70990FFADDBD375C028"
+    },
+    "ledger_current_index": 13980844,
+    "validated": false
+}
+````
