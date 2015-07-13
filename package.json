@@ -1,6 +1,6 @@
 {
   "name": "ripple-cli",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "command line interface to ripple money and payments",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/ripple/ripple-cli#readme",
   "dependencies": {
     "commander": "^2.8.1",
-    "ripple-lib": "^0.12.4"
+    "ripple-lib": "^0.12.4",
+    "superagent": "^1.2.0"
   }
 }

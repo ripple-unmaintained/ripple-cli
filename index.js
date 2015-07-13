@@ -30,6 +30,12 @@ commander
   .action(lib.server_info.bind(commander))
 
 commander
+  .command('account_info')
+  .description('retrieve info of a ripple account')
+  .action(lib.account_info.bind(commander))
+
+
+commander
   .parse(process.argv)
 
 if (!process.argv.slice(2).length) {
