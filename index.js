@@ -34,6 +34,10 @@ commander
   .description('retrieve info of a ripple account')
   .action(lib.account_info.bind(commander))
 
+commander
+  .command('account_set_domain <domain>')
+  .description('set account Domain field')
+  .action(lib.account_set_domain.bind(commander))
 
 commander
   .parse(process.argv)

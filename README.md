@@ -25,6 +25,7 @@ $ ripple-cli --help
     pay <destination> <amount> <currency> [issuer]  send money to another ripple account
     server_info                                     retrieve info of a running rippled server
     account_info                                    retrieve info of a ripple account
+    account_set_domain <domain>                     set account `Domain` field
 
   Options:
 
@@ -153,5 +154,28 @@ ripple-cli account_info -a rEvNvhm4Nddm6QvnKYXxBA5q3vFozHzrnU | json
     },
     "ledger_current_index": 13980844,
     "validated": false
+}
+````
+
+### Account Set Domain
+Pass the `--key-path` option to a file containing the ripple account secret on a single line
+Transaction result is written to `stdout` as serialized JSON
+
+By default `ripple-cli` loads the file at `~/.ripple`, expecting a json file with a "secret"
+property containing the ripple account secret. Otherwise th --key-path option must be provided
+
+The Domain will be set for the account associated with the provided secret
+
+````
+ripple-cli account_set_domain mycooldomain.com | json
+{
+    "engine_result": "tesSUCCESS",
+    "engine_result_code": 0,
+    "engine_result_message": "The transaction was applied. Only final in a validated ledger.",
+    "ledger_hash": "876BC104F7EB386B929E5AD44F14EFA47FE5EB471EA00D70DDA69AE6119193B0",
+    "ledger_index": 1337445,
+    "metadata": {
+      ...
+    }
 }
 ````
